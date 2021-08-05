@@ -1,0 +1,25 @@
+Commands:
+
+# Start new project
+django-admin startproject meeting_planner
+
+# Start web server
+python manage.py runserver
+
+# Connect to database
+python manage.py dbshell
+
+# Start a new app
+python manage.py startapp meetings
+
+# show, make, sql commands, and migrate
+python manage.py showmigrations
+python manage.py makemigrations
+python manage.py sqlmigrate meetings 0001
+python manage.py migrate
+
+# Create admin user for djange site
+python manage.py createsuperuser
+
+Django model fields
+https://docs.djangoproject.com/en/3.2/ref/models/fields/

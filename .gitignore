@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+.idea/*
+.meeting_planner/db.sqlite3
 __pycache__/
 *.py[cod]
 *$py.class
