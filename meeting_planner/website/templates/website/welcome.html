@@ -5,14 +5,37 @@
     <title>Welcome!</title>
 </head>
 <body>
+    <h1>Welcome to the meeting planner!</h1>
     <p>
         This is a <em>demo</em> on <a href="https://www.google.com"> google</a>.
     </p>
     <p>
         {{message}}
     </p>
-    <p>
-        We have {{num_meetings}} meetings scheduled.
-    </p>
+    <h2>Meetings</h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="/meetings/{{meeting.id}}">
+                    {{meeting.title}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for meeting in meetings %}
+        <li>
+            <a href="{% url 'detail' meeting.id %}">
+                {{meeting.title}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'rooms' %}">
+        Rooms list
+    </a>
+
+
 </body>
 </html>
